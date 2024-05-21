@@ -1,5 +1,5 @@
 {% set name = "pyshepseg" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ubarsc/{{ name }}/releases/download/{{ name }}-{{ version }}/{{ name }}-{{ version }}.zip
-  sha256: 7af694a16cb1b5d4be1ddf277b784b3455d2027078b68b960f681b05b7ffd05e
+  sha256: 168f12704d5a4d4bb6e80dd93a90a5fece1ddf3e62619720f0efdcd29820c616
 
 build:
   number: 0
