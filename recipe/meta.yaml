@@ -22,11 +22,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - numpy
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - scikit-learn
