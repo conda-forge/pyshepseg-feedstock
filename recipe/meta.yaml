@@ -22,16 +22,17 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - numpy
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - scikit-learn
     - numba
     - gdal
+    - libgdal-kea
 
 test:
   imports:
