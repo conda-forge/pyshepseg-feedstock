@@ -22,7 +22,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python {{ python_min }}.*
     - pip
     - setuptools
     - numpy
@@ -36,6 +36,8 @@ requirements:
     - libgdal-kea
 
 test:
+  requires:
+    - python {{ python_min }}.*
   imports:
     - pyshepseg
     - pyshepseg.shepseg
