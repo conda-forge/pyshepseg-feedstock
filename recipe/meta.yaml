@@ -1,5 +1,5 @@
 {% set name = "pyshepseg" %}
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ubarsc/{{ name }}/releases/download/{{ name }}-{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6adec7d2216ae4844b83bae0c4597c19a624c16e26a354bc8c02f291ce609578
+  sha256: 66cdc1b3f654ff5ed500e81bd5edb1b7940daf473dea44a02b1fac02451fa2e3
 
 build:
   number: 0
@@ -22,7 +22,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python {{ python_min }}.*
     - pip
     - setuptools
     - numpy
@@ -36,6 +36,8 @@ requirements:
     - libgdal-kea
 
 test:
+  requires:
+    - python {{ python_min }}.*
   imports:
     - pyshepseg
     - pyshepseg.shepseg
